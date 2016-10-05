@@ -1,4 +1,4 @@
-<p>This is from sales_view.php!</p>
+<h1>Try our delicious menu!</h1>
 
 {sales_table}
 
