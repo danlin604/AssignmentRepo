@@ -19,11 +19,11 @@ class Sales_Controller extends Application
 	 */
 	public function index()
 	{
-		$items = $this->product_model->all();
+		$items = $this->stock_model->all();
 
 		foreach($items as $item)
 		{
-			$cells[] = $this->parser->parse('_cell', (array) $item, true);
+			$cells[] = $this->parser->parse('_sales_cell', (array) $item, true);
 		}
 
 		$this->load->library('table');
@@ -42,10 +42,4 @@ class Sales_Controller extends Application
 		$this->data['pagebody'] = 'sales_view';
 		$this->render(); 
 	}
-
-	public function test($which)
-	{
-		echo $which;
-	}
-
 }
