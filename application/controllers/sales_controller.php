@@ -1,22 +1,14 @@
 <?php
 
+/*
+The sales page should show a menu of purchaseable items, with description & price for each. The goal of this page is to build an order with multiple items, and to log the transaction that would result if the sale proceeded for real.
+*/
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Sales_Controller extends Application
 {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/
-	 * 	- or -
-	 * 		http://example.com/welcome/index
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
 		$items = $this->stock_model->all();
