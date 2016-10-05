@@ -16,14 +16,13 @@ class Application extends CI_Controller
 	 * Constructor.
 	 * Establish view parameters & load common helpers
 	 */
-
 	function __construct()
 	{
 		parent::__construct();
 
 		//  Set basic view parameters
 		$this->data = array ();
-		$this->data['pagetitle'] = 'CodeIgniter3.1 Starter 2';
+		$this->data['pagetitle'] = 'McDonalds';
 		$this->data['ci_version'] = (ENVIRONMENT === 'development') ? 'CodeIgniter Version <strong>'.CI_VERSION.'</strong>' : '';
 	}
 
