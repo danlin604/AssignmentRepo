@@ -8,23 +8,44 @@ class Stock_Model extends CI_Model
 	var $data = array(
 		array
 		(	'id' => '1', 
-			'name' => 'Burger',
-			'description' => 'Single paddy',
-			'price' => '5.00',
+			'name' => 'Big Mac',
+			'description' => 'One of a kind, legendary Big Mac, made with two 100% Canadian beef patties, special sauce, crisp lettuce, processed cheddar cheese, pickles and onions on a toasted sesame seed bun. Nothing compares to the taste.',
+			'price' => '5.99',
 
 		),
 		array
 		(
 			'id' => '2', 
-			'name' => 'Fries',
-			'description' => 'Freedom fries',
-			'price' => '3.50'
+			'name' => 'Double Big Mac',
+			'description' => 'One of a kind, Double Big Mac, made with four 100% Canadian beef patties, special sauce, crisp lettuce, processed cheddar cheese, pickles and onions on a toasted sesame seed bun. Nothing compares to the taste.',
+			'price' => '8.99'
 		),
 		array
 		(
 			'id' => '3', 
-			'name' => 'Salad',
-			'description' => 'Lawn grass',
+			'name' => 'Cheeseburger',
+			'description' => 'A slice of melted processed cheddar cheese on a juicy, 100% pure Canadian beef patty with tangy pickles and onions, ketchup and mustard on a freshly-toasted bun.',
+			'price' => '3.99'
+		),
+		array
+		(
+			'id' => '4', 
+			'name' => 'Filet-O-Fish',
+			'description' => 'Fresh from the deep, cold waters of Alaska’s Bering Sea, this light filet of Alaska Pollock is all yours. Pure temptation on a lightly steamed bun, topped with processed cheddar cheese and tangy tartar sauce.',
+			'price' => '4.99'
+		),
+		array
+		(
+			'id' => '5', 
+			'name' => 'Fries',
+			'description' => 'McDonald’s World Famous Fries are always a delicious choice. Served perfectly golden, our fries promise a one-of-a-kind taste because they’re made from the finest potatoes from Canadian farms. Mmmm… of course you want fries with that!',
+			'price' => '4.60'
+		),
+		array
+		(
+			'id' => '6', 
+			'name' => 'Soft Drink',
+			'description' => 'A cold and refreshing companion to any meal on our menu.',
 			'price' => '4.60'
 		)	
 	);

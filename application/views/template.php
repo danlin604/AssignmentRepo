@@ -2,40 +2,49 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>{pagetitle}</title>
-        <!--
-        <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"/>
-        <link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
-        <link rel="stylesheet" type="text/css" media="all" href="css/text.css" />
-        <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
-        <link rel="stylesheet" type="text/css" media="all" href="css/lightbox.css" />
-        -->
-    </head>
-    <body>
-        <div id="wrapper">
-            <div id="header">
-                <span class="myhead">{pagetitle}</span>
-                <span class="mynav">
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/link2">link2</a></li>
-                        <li><a href="/link3">link3</a></li>
-                    </ul>
-                </span>
-            </div>
-            <div class="alone"></div>
-            <div id="content">
-				{content}
-            </div>
 
-            <!--
-            <div id="footer" class="span12">
-                Copyright &copy; 2014,  <a href="mailto:someone@somewhere.com">Me</a>.
-            </div>
-            -->
-        </div>
-        <!--
-        <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script> 
-        <script type="text/javascript" src="js/lightbox.min.js"></script> 
-        -->
+        <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+		<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue-indigo.min.css" />
+
+    </head>
+
+    <body>
+
+		<!-- Simple header with scrollable tabs. -->
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		  <header class="mdl-layout__header">
+		    <div class="mdl-layout__header-row">
+		      <!-- Title -->
+		      <span class="mdl-layout-title">{pagetitle}</span>
+		    </div>
+		    <!-- Tabs -->
+		    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+		      <a href="/" class="mdl-layout__tab is-active">Home</a>
+		      <a href="/sales" class="mdl-layout__tab">Sales</a>
+		      <a href="/production" class="mdl-layout__tab">Production</a>
+		      <a href="/receiving" class="mdl-layout__tab">Receiving</a>
+		      <a href="/admin" class="mdl-layout__tab">Admin</a>
+		    </div>
+		  </header>
+
+		</div>
+
+
+		<main class="mdl-layout__content">
+			<div id="wrapper">
+			    <div class="alone"></div>
+
+			    <div id="content">
+			    	{content}
+			    </div>
+
+			</div>
+		</main>
+
+		<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+
     </body>
 </html>
