@@ -5,3 +5,5 @@
 <p>{description}</p>
 
 <p>${price}</p>
+
+<p>Currently Ready: {currAvail}
