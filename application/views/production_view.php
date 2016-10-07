@@ -1,7 +1,39 @@
 <br><br><br><br><br>
-<h1>McDonalds Legendary Recipes</h1>
 
-{production_table}
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Ingredients</th>
+  </tr>
+
+  {items}
+  <tr>
+    <td>{id}</td>
+    <td>{description}</td>
+    <td>{ingredients}</td>
+  </tr>
+{/items}
+
+</table>
 
 
 <?php
