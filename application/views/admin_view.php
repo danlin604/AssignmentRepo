@@ -1,5 +1,3 @@
-<br><br><br><br><br><br><br>
-
 <style>
 table {
     font-family: arial, sans-serif;

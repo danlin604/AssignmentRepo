@@ -8,6 +8,13 @@
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 		<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue-indigo.min.css" />
+		<style>
+			main {
+				padding: 20px;
+				background: #fafafa;
+				position: relative;
+			}
+		</style>
 
     </head>
 
