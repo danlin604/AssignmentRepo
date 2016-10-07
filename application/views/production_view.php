@@ -25,9 +25,9 @@ tr:nth-child(even) {
     <th>Ingredients</th>
   </tr>
 
-  {items}
+ {items}
   <tr>
-    <td>{id}</td>
+    <td>{name}</td>
     <td>{description}</td>
     <td>{ingredients}</td>
   </tr>

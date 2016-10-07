@@ -18,7 +18,7 @@ class Production_Controller extends Application
 		$items = array();
 		foreach($source as $record)
 		{
-			$items[] = array ('id' => $record['id'], 'description' => $record['description'], 'ingredients' => $record['ingredients']);
+			$items[] = array ('name' => $record['name'], 'description' => $record['description'], 'ingredients' => $record['ingredients']);
 		}
 
 		$this->data['items'] = $items;
