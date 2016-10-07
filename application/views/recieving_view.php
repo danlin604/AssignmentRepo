@@ -11,7 +11,7 @@
   <tbody>
     <tr>
       <td class="mdl-data-table__cell--non-numeric">{name}</td>
-      <td>${Desc}</td>
+      <td>{Desc}</td>
       <td>{receiving_unit}</td>
     </tr>
   </tbody>
