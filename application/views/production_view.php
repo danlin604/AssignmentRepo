@@ -1,4 +1,3 @@
-<br><br><br><br><br>
 
 <style>
 table {
@@ -18,6 +17,9 @@ tr:nth-child(even) {
 }
 </style>
 
+
+<h1>McDonalds Legendary Recipes</h1>
+
 <table>
   <tr>
     <th>Name</th>
@@ -36,8 +38,7 @@ tr:nth-child(even) {
 </table>
 
 
-<?php
-/*
+<!--
 /*
 QUICK Production_View page REQUIREMENTS...
 
@@ -46,4 +47,4 @@ QUICK Production_View page REQUIREMENTS...
 - Log any items made, without updating inventory. ???????
 
 */ 
-?>
+-->
