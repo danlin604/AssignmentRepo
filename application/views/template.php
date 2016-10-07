@@ -8,41 +8,39 @@
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 		<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue-indigo.min.css" />
+		<style>
+			main {
+				padding: 20px;
+				background: #fafafa;
+				position: relative;
+			}
+		</style>
 
     </head>
 
     <body>
 
-		<!-- Simple header with scrollable tabs. -->
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-		  <header class="mdl-layout__header">
-		    <div class="mdl-layout__header-row">
-		      <!-- Title -->
-		      <span class="mdl-layout-title">{pagetitle}</span>
-		    </div>
-		    <!-- Tabs -->
-		    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-		      <a href="/" class="mdl-layout__tab is-active">Home</a>
-		      <a href="/sales" class="mdl-layout__tab">Sales</a>
-		      <a href="/production" class="mdl-layout__tab">Production</a>
-		      <a href="/receiving" class="mdl-layout__tab">Receiving</a>
-		      <a href="/admin" class="mdl-layout__tab">Admin</a>
-		    </div>
-		  </header>
+			<header class="mdl-layout__header">
+				<div class="mdl-layout__header-row">
+					<!-- Title -->
+					<span class="mdl-layout-title">{pagetitle}</span>
+				</div>
 
+				<!-- Tabs -->
+				<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+					<a href="/" class="mdl-layout__tab">Home</a>
+					<a href="/sales" class="mdl-layout__tab">Sales</a>
+					<a href="/production" class="mdl-layout__tab">Production</a>
+					<a href="/receiving" class="mdl-layout__tab">Receiving</a>
+					<a href="/admin" class="mdl-layout__tab">Admin</a>
+				</div>
+			</header>
+
+			<main class="mdl-layout__content">
+				<div class="page-content">{content}</div>
+			</main>
 		</div>
-
-
-		<main class="mdl-layout__content">
-			<div id="wrapper">
-			    <div class="alone"></div>
-
-			    <div id="content">
-			    	{content}
-			    </div>
-
-			</div>
-		</main>
 
 		<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 
