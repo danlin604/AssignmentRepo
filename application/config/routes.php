@@ -50,6 +50,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['sales'] = 'sales_controller';
+$route['sales/(:num)'] = 'sales_controller/get/$1';
+
 $route['production'] = 'production_controller';
 $route['receiving'] = 'receiving_controller';
 $route['admin'] = 'administrator_controller';
@@ -57,3 +59,21 @@ $route['admin'] = 'administrator_controller';
 $route['default_controller'] = 'homepage_controller';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+/*
+$route['sleep'] = 'first/zzz';
+$route['show/(:num)'] = 'first/gimme/$1';
+
+$route['lock/(:any)/(:any)'] = 'welcome/shucks';
+$route['comp(\d+)/(.*)'] = 'wise/bingo';
+$route['dunno'] = function() {
+	$source = './assets/images/surprise.jpg'; // an image you provide
+	// set the mime type for that image
+	header("Content-type: image/jpeg"); 
+	header('Content-Disposition: inline');
+	readfile($source); // dish it
+	die(); // and we don't have to go any further
+};                 
+$route['^[a-zA-Z]{4}/bingo'] = 'bingo';
+*/

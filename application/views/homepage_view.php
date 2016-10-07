@@ -1,4 +1,4 @@
-<h1>Business Summary</h1>
+<h5>Business Summary</h5>
 
 <table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
   <thead>

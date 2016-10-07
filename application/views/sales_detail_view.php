@@ -2,8 +2,8 @@
   <thead>
     <tr>
       <th class="mdl-data-table__cell--non-numeric">Name</th>
-      <th class="mdl-data-table__cell--non-numeric">Description</th>
-      <th class="mdl-data-table__cell--non-numeric">Recieving Unit</th>
+      <th class="mdl-data-table__cell--non-numeric">Price</th>
+      <th class="mdl-data-table__cell--non-numeric">Stock</th>
     </tr>
   </thead>
 
@@ -11,8 +11,8 @@
   <tbody>
     <tr>
       <td class="mdl-data-table__cell--non-numeric">{name}</td>
-      <td>${Desc}</td>
-      <td>{receiving_unit}</td>
+      <td>${price}</td>
+      <td>{currAvail}</td>
     </tr>
   </tbody>
   {/items}
