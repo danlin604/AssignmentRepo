@@ -7,6 +7,7 @@
  * update the currAvail in the stock model). Could do a number field beside 
  * and a prompt for the update?
  *
+ * @author Manveer Bhangu
 */
 
 defined('BASEPATH') OR exit('No direct script access allowed');
@@ -15,9 +16,7 @@ class receiving_controller extends Application
 {
 
 	public function index()
-	{	
-		// Option #2, need to display the contents on the view of the receiving view, don't need revieving cell 
-		
+	{			
 		//view we want to show
 		$this->data['pagebody'] = 'recieving_view';
 
