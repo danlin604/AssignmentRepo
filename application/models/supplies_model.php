@@ -11,7 +11,7 @@ class Supplies_Model extends CI_Model {
 
 	var $data = array(
 		array(
-			'id' => '1'
+			'id' => '1',
 			'name' => 'pickels',
 			'Desc' => 'Dairy Farms Pickels',
 			'receiving_unit' => 'Case of 10 jars',
@@ -19,7 +19,7 @@ class Supplies_Model extends CI_Model {
 			'stock_unit' => 'Jars of 100 pickels',
 			'quantities_on_hand' => '120 pickels'),
 		array(
-			'id' => '2'
+			'id' => '2',
 			'name' => 'ketchup',
 			'Desc' => 'Dairy Farms Ketchup',
 			'receiving_unit' => 'Case of 15 boxes',
@@ -27,7 +27,7 @@ class Supplies_Model extends CI_Model {
 			'stock_unit' => 'Boxes of 100 packets of ketchup',
 			'quantities_on_hand' => '180 packets of ketchup'),
 		array(
-			'id' => '3'
+			'id' => '3',
 			'name' => 'tomato',
 			'Desc' => 'Ben\'s tomatos',
 			'receiving_unit' => 'Case of 10 boxes',
@@ -35,7 +35,7 @@ class Supplies_Model extends CI_Model {
 			'stock_unit' => 'Boxes of 250 tomato slices',
 			'quantities_on_hand' => '50 tomoato slices'),
 		array(
-			'id' => '4'
+			'id' => '4',
 			'name' => 'Mustard',
 			'Desc' => 'Frank\'s Amazing Mustard',
 			'receiving_unit' => 'Case of 10 boxes',
@@ -43,7 +43,7 @@ class Supplies_Model extends CI_Model {
 			'stock_unit' => 'Boxes of 150 packets of mustard',
 			'quantities_on_hand' => '40 packets of mustard'),
 		array(
-			'id' => '5'
+			'id' => '5',
 			'name' => 'Onions',
 			'Desc' => 'Dairy Farms Onions',
 			'receiving_unit' => 'Bag of 80 Onions',
@@ -51,7 +51,7 @@ class Supplies_Model extends CI_Model {
 			'stock_unit' => '80 Onions',
 			'quantities_on_hand' => '20 Onions'),
 		array(
-			'id' => '6'
+			'id' => '6',
 			'name' => 'buns',
 			'Desc' => 'Super secret special buns',
 			'receiving_unit' => 'Cases of 20 boxes',
@@ -59,7 +59,7 @@ class Supplies_Model extends CI_Model {
 			'stock_unit' => 'Boxes of 100 buns',
 			'quantities_on_hand' => '250 buns'),
 		array(
-			'id' => '7'
+			'id' => '7',
 			'name' => 'meat patty',
 			'Desc' => 'Bob\'s Farms Patties',
 			'receiving_unit' => 'Cases of 25 boxes',
@@ -67,7 +67,7 @@ class Supplies_Model extends CI_Model {
 			'stock_unit' => 'boxes of 90 patties',
 			'quantities_on_hand' => '250 meat patties'),
 		array(
-			'id' => '8'
+			'id' => '8',
 			'name' => 'Mac Sauce',
 			'Desc' => 'super top secret recipe',
 			'receiving_unit' => 'Cases of 10 boxes',
@@ -75,7 +75,7 @@ class Supplies_Model extends CI_Model {
 			'stock_unit' => 'boxes of 30 packets',
 			'quantities_on_hand' => '4 packets'),
 		array(
-			'id' => '9'
+			'id' => '9',
 			'name' => 'fish patty',
 			'Desc' => 'Bob\'s Farms Patties',
 			'receiving_unit' => 'Cases of 15 boxes',
@@ -83,7 +83,7 @@ class Supplies_Model extends CI_Model {
 			'stock_unit' => 'boxes of 110 fish patties',
 			'quantities_on_hand' => '250 fish patties'),
 		array(
-			'id' => '10'
+			'id' => '10',
 			'name' => 'fries',
 			'Desc' => 'Bob\'s Farms Patties',
 			'receiving_unit' => 'Cases of 30 boxes',
@@ -91,7 +91,7 @@ class Supplies_Model extends CI_Model {
 			'stock_unit' => 'boxes of 500 fries',
 			'quantities_on_hand' => '300 fries'),
 		array(
-			'id' => '11'
+			'id' => '11',
 			'name' => 'soft drink',
 			'Desc' => 'Bob\'s Farms Patties',
 			'receiving_unit' => 'Cases of 40 boxes',
