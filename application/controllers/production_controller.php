@@ -18,11 +18,31 @@ class Production_Controller extends Application
 		$items = array();
 		foreach($source as $record)
 		{
-			$items[] = array ('name' => $record['name'], 'description' => $record['description'], 'ingredients' => $record['ingredients']);
+			$items[] = array (	'id' => $record['id'],
+								'name' => $record['name'], 
+								'description' => $record['description'], 
+								'ingredients' => $record['ingredients']);
 		}
 
 		$this->data['items'] = $items;
 
+		$this->render(); 
+	}
+
+	public function get($which)
+	{
+		//view we want to show
+		$this->data['pagebody'] = 'production_detail_view';
+
+		//build our list of item records for the view
+		$source = $this->recipes_model->get($which);
+		$items[] = array (		'id' => $source['id'],
+								'name' => $source['name'], 
+								'description' => $source['description'], 
+								'ingredients' => $source['ingredients']);
+
+		$this->data['items'] = $items;
+				
 		$this->render(); 
 	}
 }

@@ -53,6 +53,8 @@ $route['sales'] = 'sales_controller';
 $route['sales/(:num)'] = 'sales_controller/get/$1';
 
 $route['production'] = 'production_controller';
+$route['production/(:num)'] = 'production_controller/get/$1';
+
 $route['receiving'] = 'receiving_controller';
 $route['admin'] = 'administrator_controller';
 
