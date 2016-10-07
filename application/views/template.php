@@ -15,6 +15,9 @@
 				background: #fafafa;
 				position: relative;
 			}
+			.mdl-data-table {
+			    white-space: normal; !important;
+			}
 		</style>
 
     </head>
