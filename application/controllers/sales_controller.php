@@ -34,4 +34,19 @@ class Sales_Controller extends Application
 		$this->data['pagebody'] = 'sales_view';
 		$this->render(); 
 	}
+
+
+	public function get($which)
+	{
+		//view we want to show
+		$this->data['pagebody'] = 'sales_detail_view';
+
+		//build our list of item records for the view
+		$source = $this->stock_model->get($which);
+		$items[] = array ('id' => $source['id'], 'name' => $source['name'], 'description' => $source['description'], 'price' => $source['price'], 'currAvail' => $source['currAvail']);
+
+		$this->data['items'] = $items;
+				
+		$this->render(); 
+	}
 }
