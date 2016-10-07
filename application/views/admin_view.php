@@ -1,39 +1,25 @@
-<style>
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
+<table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Name</th>
+      <th class="mdl-data-table__cell--non-numeric">Description</th>
+      <th class="mdl-data-table__cell--non-numeric">Recieving Unit</th>
+      <th class="mdl-data-table__cell--non-numeric">Receiving Cost</th>
+      <th class="mdl-data-table__cell--non-numeric">Stock Unit</th>
+      <th class="mdl-data-table__cell--non-numeric">Quantities on Hand</th>
+    </tr>
+  </thead>
 
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-</style>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>recieving Unit</th>
-	<th>receiving Cost</th>
-	<th>Stock Unit</th>
-	<th>Quantities on hand</th>
-  </tr>
   {supplies}
-  <tr>
-    <td>{id}</td>
-    <td>{Desc}</td>
-    <td>{receiving_unit}</td>
-	<td>{receiving_cost}</td>
-	<td>{stock_unit}</td>
-	<td>{quantities_on_hand}</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>{desc}</td>
+      <td>{receiving_unit}</td>
+      <td>{receiving_cost}</td>
+      <td>{stock_unit}</td>
+      <td>{quantities_on_hand}</td>
+    </tr>
+  </tbody>
   {/supplies}
 </table>
 
@@ -71,4 +57,22 @@ tr:nth-child(even) {
 	<td>{currAvail}</td>
   </tr>
   {/stock}
+</table>
+
+<table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Category</th>
+      <th class="mdl-data-table__cell--non-numeric">Amount</th>
+    </tr>
+  </thead>
+
+  {items}
+  <tbody>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">{name}</td>
+      <td>{cost}</td>
+    </tr>
+  </tbody>
+  {/items}
 </table>
