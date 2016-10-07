@@ -1,32 +1,20 @@
-<style>
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
+<table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Name</th>
+      <th class="mdl-data-table__cell--non-numeric">Description</th>
+      <th class="mdl-data-table__cell--non-numeric">Recieving Unit</th>
+    </tr>
+  </thead>
 
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-</style>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>recieving Unit</th>
-  </tr>
   {items}
-  <tr>
-    <td>{id}</td>
-    <td>{Desc}</td>
-    <td>{receiving_unit}</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">{name}</td>
+      <td>${Desc}</td>
+      <td>{receiving_unit}</td>
+    </tr>
+  </tbody>
   {/items}
+  
 </table>
