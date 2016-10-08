@@ -9,7 +9,8 @@ class Recipes_Model extends CI_Model
 			'id' => '1', 
 			'name' => 'Big Mac',
 			'description' => 'One of a kind, legendary Big Mac, made with two 100% Canadian beef patties, special sauce, crisp lettuce, processed cheddar cheese, pickles and onions on a toasted sesame seed bun. Nothing compares to the taste.',
-			'ingredients' => 'Big Mac Bun, 100% Beef Patty, Shredded Lettuce, Big Mac Sauce, Pasteurized Process American Cheese, Pickle Slices'),
+			'ingredients' => 'Big Mac Bun, 100% Beef Patty, Shredded Lettuce, Big Mac Sauce, Pasteurized Process American Cheese, Pickle Slices'
+			),
 		array(
 			'id' => '2', 
 			'name' => 'Double Big Mac',

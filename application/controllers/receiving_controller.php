@@ -25,7 +25,7 @@ class receiving_controller extends Application
 		$items = array ();
 		foreach ($source as $record)
 		{
-			$items[] = array ('id' => $record['id'], 'Desc' => $record['Desc'], 'receiving_unit' => $record['receiving_unit']);
+			$items[] = array ('id' => $record['id'], 'name' => $record['name'], 'Desc' => $record['Desc'], 'receiving_unit' => $record['receiving_unit']);
 		}
 		$this->data['items'] = $items;
 
