@@ -16,12 +16,23 @@ class Production_Controller extends Application
 
 		$source = $this->recipes_model->all();
 		$items = array();
-		foreach($source as $record)
+		foreach($source as $source)
 		{
-			$items[] = array (	'id' => $record['id'],
-								'name' => $record['name'], 
-								'description' => $record['description'], 
-								'ingredients' => $record['ingredients']);
+			$items[] = array (	'id' => $source['id'],
+								'name' => $source['name'], 
+								'description' => $source['description'], 
+								'pickel' => $source['pickel'],
+								'ketchup' => $source['ketchup'],
+								'tomato' => $source['tomato'],
+								'mustard' => $source['mustard'],
+								'onions' => $source['onions'],
+								'buns' => $source['buns'],
+								'meat patty' => $source['meat patty'],
+								'mac sauce' => $source['mac sauce'],
+								'fish patty' => $source['fish patty'],
+								'fries' => $source['fries'],
+								'soft drink' => $source['soft drink']
+							);
 		}
 
 		$this->data['items'] = $items;
@@ -39,7 +50,18 @@ class Production_Controller extends Application
 		$items[] = array (		'id' => $source['id'],
 								'name' => $source['name'], 
 								'description' => $source['description'], 
-								'ingredients' => $source['ingredients']);
+								'pickel' => $source['pickel'],
+								'ketchup' => $source['ketchup'],
+								'tomato' => $source['tomato'],
+								'mustard' => $source['mustard'],
+								'onions' => $source['onions'],
+								'buns' => $source['buns'],
+								'meat patty' => $source['meat patty'],
+								'mac sauce' => $source['mac sauce'],
+								'fish patty' => $source['fish patty'],
+								'fries' => $source['fries'],
+								'soft drink' => $source['soft drink']
+						);
 
 		$this->data['items'] = $items;
 				
