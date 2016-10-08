@@ -20,6 +20,7 @@ class Recipes_Model extends CI_Model
 			'fish patty' => '-',
 			'fries' => '-',
 			'soft drink' => '-'
+
 			),
 		array(
 			'id' => '2', 

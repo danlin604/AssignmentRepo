@@ -33,7 +33,7 @@ class administrator_controller extends Application
 		// go through the sources and store the data in there respective arrays
 		foreach ($supplies_source as $record)
 		{
-			$supplies[] = array ('id' => $record['id'], 'Desc' => $record['Desc'], 'receiving_unit' => $record['receiving_unit'], 'receiving_cost' => $record['receiving_cost'], 'stock_unit' => $record['stock_unit'], 'quantities_on_hand' => $record['quantities_on_hand']);
+			$supplies[] = array ('id' => $record['id'], 'name' => $record['name'], 'Desc' => $record['Desc'], 'receiving_unit' => $record['receiving_unit'], 'receiving_cost' => $record['receiving_cost'], 'stock_unit' => $record['stock_unit'], 'quantities_on_hand' => $record['quantities_on_hand']);
 		}
 		
 		$this->data['supplies'] = $supplies;
