@@ -1,18 +1,21 @@
 <h5>McDonalds Legendary Recipes</h5>
 
-<table>
-  <tr>
-    <th>Name</th>
-  </tr>
+<table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Name</th>
+    </tr>
+  </thead>
 
- {items}
-  <tr>
-    <td><a href="/production/{id}" title="{id}"> {name} </a></td>
-  </tr>
-{/items}
-
+  {items}
+  <tbody>
+    <tr>
+      <td>	<a href="/production/{id}" title="{id}">	{name}	</a></td>
+    </tr> 
+  </tbody>
+  {/items}
+  
 </table>
-
 
 <!--
 QUICK Production_View page REQUIREMENTS...
