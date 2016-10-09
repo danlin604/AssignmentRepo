@@ -5,7 +5,7 @@ The homepage should be a dashboard of sorts, showing some summary information: $
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Homepage_Controller extends Application
+class homepage_controller extends Application
 {
 
 	public function index()
