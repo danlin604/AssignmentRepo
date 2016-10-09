@@ -37,7 +37,17 @@
     <tr>
       <th class="mdl-data-table__cell--non-numeric">Name</th>
       <th class="mdl-data-table__cell--non-numeric">Description</th>
-      <th class="mdl-data-table__cell--non-numeric">Ingredients Required</th>
+      <th class="mdl-data-table__cell--non-numeric">Pickel</th>
+      <th class="mdl-data-table__cell--non-numeric">ketchup</th>
+      <th class="mdl-data-table__cell--non-numeric">tomato</th>
+      <th class="mdl-data-table__cell--non-numeric">mustard</th>
+      <th class="mdl-data-table__cell--non-numeric">onions</th>
+      <th class="mdl-data-table__cell--non-numeric">buns</th>
+      <th class="mdl-data-table__cell--non-numeric">meat patty</th>
+      <th class="mdl-data-table__cell--non-numeric">Mac sauce</th>
+      <th class="mdl-data-table__cell--non-numeric">Fish patty</th>
+      <th class="mdl-data-table__cell--non-numeric">Fries</th>
+      <th class="mdl-data-table__cell--non-numeric">Soft drink</th>
     </tr>
   </thead>
 
@@ -46,7 +56,17 @@
     <tr>
       <td class="mdl-data-table__cell--non-numeric">{name}</td>
       <td class="mdl-data-table__cell--non-numeric">{description}</td>
-      <td class="mdl-data-table__cell--non-numeric">{ingredients}</td>
+      <td class="mdl-data-table__cell--non-numeric">{pickel}</td>
+      <td class="mdl-data-table__cell--non-numeric">{ketchup}</td>
+      <td class="mdl-data-table__cell--non-numeric">{tomato}</td>
+      <td class="mdl-data-table__cell--non-numeric">{mustard}</td>
+      <td class="mdl-data-table__cell--non-numeric">{onions}</td>
+      <td class="mdl-data-table__cell--non-numeric">{buns}</td>
+      <td class="mdl-data-table__cell--non-numeric">{meat patty}</td>
+      <td class="mdl-data-table__cell--non-numeric">{mac sauce}</td>
+      <td class="mdl-data-table__cell--non-numeric">{fish patty}</td>
+      <td class="mdl-data-table__cell--non-numeric">{fries}</td>
+      <td class="mdl-data-table__cell--non-numeric">{soft drink}</td>
       <td><button type="edit" onClick="alert('add functionality here')">Edit</button></td>
       <td><button type="delete" onClick="alert('add functionality here')">Delete</button></td>
     </tr>

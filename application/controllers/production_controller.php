@@ -6,7 +6,7 @@ The sales page should show a menu of purchaseable items, with description & pric
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Production_Controller extends Application
+class production_controller extends Application
 {
 
 	public function index()

@@ -41,7 +41,7 @@ class administrator_controller extends Application
 		
 		foreach ($recipes_source as $record)
 		{
-			$recipes[] = array ('id' => $record['id'], 'name' => $record['name'], 'description' => $record['description'], 'ingredients' => $record['ingredients']);
+			$recipes[] = array ('id' => $record['id'], 'name' => $record['name'], 'description' => $record['description'], 'pickel' => $record['pickel'], 'ketchup' => $record['ketchup'], 'tomato' => $record['tomato'], 'mustard' => $record['mustard'], 'onions' => $record['onions'], 'buns' => $record['buns'], 'meat patty' => $record['meat patty'], 'mac sauce' => $record['mac sauce'], 'fish patty' => $record['fish patty'], 'fries' => $record['fries'], 'soft drink' => $record['soft drink']);
 		}
 		
 		$this->data['recipes'] = $recipes;
