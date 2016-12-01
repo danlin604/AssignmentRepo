@@ -1,40 +1,21 @@
-<style>
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-</style>
-
 <h5>McDonalds Legendary Recipes</h5>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Ingredients</th>
-  </tr>
+<table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Name</th>
+    </tr>
+  </thead>
 
- {items}
-  <tr>
-    <td>{name}</td>
-    <td>{description}</td>
-    <td>{ingredients}</td>
-  </tr>
-{/items}
-
+  {items}
+  <tbody>
+    <tr>
+      <td>	<a href="/production/{id}" title="{id}">	{name}	</a></td>
+    </tr> 
+  </tbody>
+  {/items}
+  
 </table>
-
 
 <!--
 QUICK Production_View page REQUIREMENTS...

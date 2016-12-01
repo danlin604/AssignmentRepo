@@ -33,7 +33,7 @@ class administrator_controller extends Application
 		// go through the sources and store the data in there respective arrays
 		foreach ($supplies_source as $record)
 		{
-			$supplies[] = array ('id' => $record['id'], 'Desc' => $record['Desc'], 'receiving_unit' => $record['receiving_unit'], 'receiving_cost' => $record['receiving_cost'], 'stock_unit' => $record['stock_unit'], 'quantities_on_hand' => $record['quantities_on_hand']);
+			$supplies[] = array ('id' => $record['id'], 'name' => $record['name'], 'Desc' => $record['Desc'], 'receiving_unit' => $record['receiving_unit'], 'receiving_cost' => $record['receiving_cost'], 'stock_unit' => $record['stock_unit'], 'quantities_on_hand' => $record['quantities_on_hand']);
 		}
 		
 		$this->data['supplies'] = $supplies;
@@ -41,7 +41,7 @@ class administrator_controller extends Application
 		
 		foreach ($recipes_source as $record)
 		{
-			$recipes[] = array ('id' => $record['id'], 'name' => $record['name'], 'description' => $record['description'], 'ingredients' => $record['ingredients']);
+			$recipes[] = array ('id' => $record['id'], 'name' => $record['name'], 'description' => $record['description'], 'pickel' => $record['pickel'], 'ketchup' => $record['ketchup'], 'tomato' => $record['tomato'], 'mustard' => $record['mustard'], 'onions' => $record['onions'], 'buns' => $record['buns'], 'meat patty' => $record['meat patty'], 'mac sauce' => $record['mac sauce'], 'fish patty' => $record['fish patty'], 'fries' => $record['fries'], 'soft drink' => $record['soft drink']);
 		}
 		
 		$this->data['recipes'] = $recipes;

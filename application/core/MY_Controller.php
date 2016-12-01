@@ -16,6 +16,7 @@ class Application extends CI_Controller
 	 * Constructor.
 	 * Establish view parameters & load common helpers
 	 */
+
 	function __construct()
 	{
 		parent::__construct();

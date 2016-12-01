@@ -6,7 +6,7 @@ The sales page should show a menu of purchaseable items, with description & pric
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Production_Controller extends Application
+class production_controller extends Application
 {
 
 	public function index()
@@ -16,13 +16,55 @@ class Production_Controller extends Application
 
 		$source = $this->recipes_model->all();
 		$items = array();
-		foreach($source as $record)
+		foreach($source as $source)
 		{
-			$items[] = array ('name' => $record['name'], 'description' => $record['description'], 'ingredients' => $record['ingredients']);
+			$items[] = array (	'id' => $source['id'],
+								'name' => $source['name'], 
+								'description' => $source['description'], 
+								'pickel' => $source['pickel'],
+								'ketchup' => $source['ketchup'],
+								'tomato' => $source['tomato'],
+								'mustard' => $source['mustard'],
+								'onions' => $source['onions'],
+								'buns' => $source['buns'],
+								'meat patty' => $source['meat patty'],
+								'mac sauce' => $source['mac sauce'],
+								'fish patty' => $source['fish patty'],
+								'fries' => $source['fries'],
+								'soft drink' => $source['soft drink']
+							);
 		}
 
 		$this->data['items'] = $items;
 
+		$this->render(); 
+	}
+
+	public function get($which)
+	{
+		//view we want to show
+		$this->data['pagebody'] = 'production_detail_view';
+
+		//build our list of item records for the view
+		$source = $this->recipes_model->get($which);
+		$items[] = array (		'id' => $source['id'],
+								'name' => $source['name'], 
+								'description' => $source['description'], 
+								'pickel' => $source['pickel'],
+								'ketchup' => $source['ketchup'],
+								'tomato' => $source['tomato'],
+								'mustard' => $source['mustard'],
+								'onions' => $source['onions'],
+								'buns' => $source['buns'],
+								'meat patty' => $source['meat patty'],
+								'mac sauce' => $source['mac sauce'],
+								'fish patty' => $source['fish patty'],
+								'fries' => $source['fries'],
+								'soft drink' => $source['soft drink']
+						);
+
+		$this->data['items'] = $items;
+				
 		$this->render(); 
 	}
 }
