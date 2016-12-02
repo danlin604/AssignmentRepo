@@ -58,7 +58,7 @@ $autoload['packages'] = array(APPPATH . 'third_party/caboose/');
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('parser', 'database', 'session', 'caboose');
+$autoload['libraries'] = array('parser', 'database', 'parsedown', 'session', 'caboose');
 
 /*
 | -------------------------------------------------------------------
@@ -138,5 +138,6 @@ $autoload['model'] = array
     'transaction_model',    
     'stock',
     'supplies',
-    'recipes'
+    'recipes',
+    'order'
 );
