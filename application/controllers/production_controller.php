@@ -11,6 +11,11 @@ class production_controller extends Application
 
 	public function index()
 	{
+                $userrole = $this->session->userdata('userrole');
+                if ($userrole != 'admin' && $userrole != 'user') {
+                    $message = 'You are not authorized to access this page. Go away';
+                    $this->data['content'] = $message;
+                }            
 
 		$this->data['pagebody'] = 'production_view';
 

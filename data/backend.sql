@@ -29,11 +29,11 @@ INSERT INTO `supplies` (`id`, `name`, `description`, `receiving_unit`, `receivin
 
 DROP TABLE IF EXISTS `stock`;
 CREATE TABLE `stock` (
-  `id` 					int(11) 		NOT NULL,
-  `name` 				varchar(256) 	NOT NULL,
+  `id` 				int(11) 	NOT NULL,
+  `name` 			varchar(256) 	NOT NULL,
   `description` 		varchar(256) 	NOT NULL,
-  `price` 				decimal(10,2) 	NOT NULL,
-  `currAvail` 			int(11) 		NOT NULL
+  `price` 			decimal(10,2) 	NOT NULL,
+  `currAvail` 			int(11) 	NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `stock` (`id`, `name`, `description`, `price`, `currAvail`) VALUES

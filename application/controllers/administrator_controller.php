@@ -16,8 +16,18 @@ class administrator_controller extends Application
 {
 
 	public function index()
-	{			
-		//view we want to show
+	{
+                $userrole = $this->session->userdata('userrole');
+                if ($userrole != 'admin') {
+                    $message = 'You are not authorized to access this page. Go away';
+                    $this->data['content'] = $message;
+                }
+                //$message = 'Get ready to fix stuff.';
+                //$this->data['pagebody' ] ='mtce';
+                //$this->data['items'] = $this->menu->all();
+                //$this->render();
+		
+                //view we want to show
 		$this->data['pagebody'] = 'admin_view';
 
 		// gets the contents from the 3 models

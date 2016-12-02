@@ -16,7 +16,13 @@ class receiving_controller extends Application
 {
 
 	public function index()
-	{			
+	{
+                $userrole = $this->session->userdata('userrole');
+                if ($userrole != 'admin' && $userrole != 'user') {
+                    $message = 'You are not authorized to access this page. Go away';
+                    $this->data['content'] = $message;
+                }
+                
 		//view we want to show
 		$this->data['pagebody'] = 'recieving_view';
 
