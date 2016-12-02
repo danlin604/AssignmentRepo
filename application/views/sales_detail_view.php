@@ -6,7 +6,8 @@
       <th class="mdl-data-table__cell--non-numeric">Stock</th>
     </tr>
   </thead>
-
   {items}
-  
 </table>
+<br>
+{recipt}
+<p><a class="btn btn-primary btn-default" role="button" href="/sales_controller/checkout">Checkout</a> <a class="btn btn-default" role="button" href="/sales_controller/cancelOrder">Cancel This Order</a></p>
