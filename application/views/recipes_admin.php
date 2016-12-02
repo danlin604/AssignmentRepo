@@ -13,7 +13,7 @@
       <td class="mdl-data-table__cell--non-numeric">{fish patty}</td>
       <td class="mdl-data-table__cell--non-numeric">{fries}</td>
       <td class="mdl-data-table__cell--non-numeric">{soft drink}</td>
-      <td><button type="edit" onClick="alert('add functionality here')">Edit</button></td>
+      <td><a href="/admin/edit/{id}">Edit {id}</a></td>
       <td><button type="delete" onClick="alert('add functionality here')">Delete</button></td>
     </tr>
   </tbody>
