@@ -135,9 +135,8 @@ $autoload['language'] = array();
 
 $autoload['model'] = array
 (
-    'stock_model',
-    'recipes_model',
-    'supplies_model',
     'transaction_model',    
-    'stock'    
+    'stock',
+    'supplies',
+    'recipes'
 );

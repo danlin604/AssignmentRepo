@@ -19,29 +19,12 @@ class production_controller extends Application
 
 		$this->data['pagebody'] = 'production_view';
 
-		$source = $this->recipes_model->all();
-		$items = array();
-		foreach($source as $source)
+		$result_recipes = ' ';
+		foreach ($this->recipes->all() as $record)
 		{
-			$items[] = array (	'id' => $source['id'],
-								'name' => $source['name'], 
-								'description' => $source['description'], 
-								'pickel' => $source['pickel'],
-								'ketchup' => $source['ketchup'],
-								'tomato' => $source['tomato'],
-								'mustard' => $source['mustard'],
-								'onions' => $source['onions'],
-								'buns' => $source['buns'],
-								'meat patty' => $source['meat patty'],
-								'mac sauce' => $source['mac sauce'],
-								'fish patty' => $source['fish patty'],
-								'fries' => $source['fries'],
-								'soft drink' => $source['soft drink']
-							);
+			$result_recipes .= $this->parser->parse('production_items', $record, true);
 		}
-
-		$this->data['items'] = $items;
-
+		$this->data['items'] = $result_recipes;
 		$this->render(); 
 	}
 
@@ -50,26 +33,10 @@ class production_controller extends Application
 		//view we want to show
 		$this->data['pagebody'] = 'production_detail_view';
 
-		//build our list of item records for the view
-		$source = $this->recipes_model->get($which);
-		$items[] = array (		'id' => $source['id'],
-								'name' => $source['name'], 
-								'description' => $source['description'], 
-								'pickel' => $source['pickel'],
-								'ketchup' => $source['ketchup'],
-								'tomato' => $source['tomato'],
-								'mustard' => $source['mustard'],
-								'onions' => $source['onions'],
-								'buns' => $source['buns'],
-								'meat patty' => $source['meat patty'],
-								'mac sauce' => $source['mac sauce'],
-								'fish patty' => $source['fish patty'],
-								'fries' => $source['fries'],
-								'soft drink' => $source['soft drink']
-						);
-
-		$this->data['items'] = $items;
-				
-		$this->render(); 
+		$result_recipes = ' ';
+		$record = $this->recipes->get($which);
+		$result_recipes .= $this->parser->parse('production_detail_view_items', $record, true);
+		$this->data['items'] = $result_recipes;
+		$this->render();
 	}
 }
