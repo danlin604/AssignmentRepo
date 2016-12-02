@@ -27,13 +27,14 @@ class receiving_controller extends Application
 		$this->data['pagebody'] = 'recieving_view';
 
 		// build the list of authors, to pass on to our view
-		$source = $this->supplies_model->all();
-		$items = array ();
-		foreach ($source as $record)
+		//$source = $this->supplies_model->all();
+		//$items = array ();
+		$result_supplies = ' ';
+		foreach ($this->supplies->all() as $record)
 		{
-			$items[] = array ('id' => $record['id'], 'name' => $record['name'], 'Desc' => $record['Desc'], 'receiving_unit' => $record['receiving_unit']);
+			$result_supplies .= $this->parser->parse('items_recieving', $record, true);
 		}
-		$this->data['items'] = $items;
+		$this->data['items'] = $result_supplies;
 
 		$this->render();
 		//$this->data = array_merge($this->data, $items);

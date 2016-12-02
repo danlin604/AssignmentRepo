@@ -31,38 +31,38 @@ class administrator_controller extends Application
 		$this->data['pagebody'] = 'admin_view';
 
 		// gets the contents from the 3 models
-		$supplies_source = $this->supplies_model->all();
-		$recipes_source = $this->recipes_model->all();
-		$stock_source = $this->stock_model->all();
+		//$supplies_source = $this->supplies_model->all();
+		//$recipes_source = $this->recipes_model->all();
+		//$stock_source = $this->stock_model->all();
 		
 		// arrays to hold the contents of the models
-		$supplies = array();
-		$recipes = array();
-		$stock = array();
+		//$supplies = array();
+		//$recipes = array();
+		//$stock = array();
 		
 		// go through the sources and store the data in there respective arrays
-		foreach ($supplies_source as $record)
+		$result_supplies = ' ';
+		foreach ($this->supplies->all() as $record)
 		{
-			$supplies[] = array ('id' => $record['id'], 'name' => $record['name'], 'Desc' => $record['Desc'], 'receiving_unit' => $record['receiving_unit'], 'receiving_cost' => $record['receiving_cost'], 'stock_unit' => $record['stock_unit'], 'quantities_on_hand' => $record['quantities_on_hand']);
+			$result_supplies .= $this->parser->parse('supplies_admin', $record, true);
 		}
-		
-		$this->data['supplies'] = $supplies;
+		$this->data['supplies'] = $result_supplies;
 
-		
-		foreach ($recipes_source as $record)
-		{
-			$recipes[] = array ('id' => $record['id'], 'name' => $record['name'], 'description' => $record['description'], 'pickel' => $record['pickel'], 'ketchup' => $record['ketchup'], 'tomato' => $record['tomato'], 'mustard' => $record['mustard'], 'onions' => $record['onions'], 'buns' => $record['buns'], 'meat patty' => $record['meat patty'], 'mac sauce' => $record['mac sauce'], 'fish patty' => $record['fish patty'], 'fries' => $record['fries'], 'soft drink' => $record['soft drink']);
-		}
-		
-		$this->data['recipes'] = $recipes;
 
-		
-		foreach ($stock_source as $record)
+		$result_recipes = ' ';
+		foreach ($this->recipes->all() as $record)
 		{
-			$stock[] = array ('id' => $record['id'], 'name' => $record['name'], 'description' => $record['description'], 'price' => $record['price'], 'currAvail' => $record['currAvail']);
+			$result_recipes .= $this->parser->parse('recipes_admin', $record, true);
 		}
-		
-		$this->data['stock'] = $stock;
+		$this->data['recipes'] = $result_recipes;
+
+
+		$result_stock = ' ';
+		foreach ($this->stock->all() as $record)
+		{
+			$result_stock .= $this->parser->parse('stock-admin', $record, true); 
+		}
+		$this->data['stock'] = $result_stock;
 
 		$this->render();
 		//$this->data = array_merge($this->data, $items);

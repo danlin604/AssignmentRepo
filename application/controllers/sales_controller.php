@@ -11,9 +11,7 @@ class sales_controller extends Application
 
 	public function index()
 	{
-		$items = $this->stock_model->all();
-
-		foreach($items as $item)
+		foreach($this->stock->all() as $item)
 		{
 			$cells[] = $this->parser->parse('_sales_cell', (array) $item, true);
 		}
@@ -42,10 +40,10 @@ class sales_controller extends Application
 		$this->data['pagebody'] = 'sales_detail_view';
 
 		//build our list of item records for the view
-		$source = $this->stock_model->get($which);
-		$items[] = array ('id' => $source['id'], 'name' => $source['name'], 'description' => $source['description'], 'price' => $source['price'], 'currAvail' => $source['currAvail']);
-
-		$this->data['items'] = $items;
+		$result = ' ';
+		$source = $this->stock->get($which);
+		$result = $this->parser->parse('sales_items', $source, true);
+		$this->data['items'] = $result;
 				
 		$this->render(); 
 	}
