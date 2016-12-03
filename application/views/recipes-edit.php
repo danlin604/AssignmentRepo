@@ -6,8 +6,16 @@
     {fid}
     {fname}
     {fdescription}
-    {fprice}
-    {fcurrAvail}
+    {ketchup}
+    {tomato}
+    {mustard}
+    {onions}
+    {buns}
+    {meat_patty}
+    {mac_sauce}
+    {fish_patty}
+    {fries}
+    {soft_drink}    
     {zsubmit} 
     <a class="btn btn-default" role="button" href="/admin/cancel">Cancel</a>
     <a class="btn btn-default" role="button" href="/admin/delete">Delete</a>

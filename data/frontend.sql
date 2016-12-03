@@ -75,14 +75,14 @@ CREATE TABLE `recipes` (
   `mustard` 			int(11) 		NOT NULL,
   `onions` 				int(11) 		NOT NULL,
   `buns` 				int(11) 		NOT NULL,
-  `meat patty` 			int(11) 		NOT NULL,
-  `mac sauce` 			int(11) 		NOT NULL,
-  `fish patty` 			int(11) 		NOT NULL,
+  `meat_patty` 			int(11) 		NOT NULL,
+  `mac_sauce` 			int(11) 		NOT NULL,
+  `fish_patty` 			int(11) 		NOT NULL,
   `fries` 				int(11) 		NOT NULL,
-  `soft drink` 			int(11) 		NOT NULL
+  `soft_drink` 			int(11) 		NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-INSERT INTO `recipes` (`id`, `name`, `description`, `pickel`, `ketchup`, `tomato`, `mustard`, `onions`, `buns`, `meat patty`, `mac sauce`, `fish patty`, `fries`, `soft drink`) VALUES
+INSERT INTO `recipes` (`id`, `name`, `description`, `pickel`, `ketchup`, `tomato`, `mustard`, `onions`, `buns`, `meat_patty`, `mac_sauce`, `fish_patty`, `fries`, `soft_drink`) VALUES
 (1, 'Big Mac', 'One of a kind, legendary Big Mac, made with two 100% Canadian beef patties, special sauce, crisp lettuce, processed cheddar cheese, pickles and onions on a toasted sesame seed bun. Nothing compares to the taste.', 2,0,0,0,3,1,2,1,0,0,0),
 (2, 'Double Big Mac', 'One of a kind, Double Big Mac, made with four 100% Canadian beef patties, special sauce, crisp lettuce, processed cheddar cheese, pickles and onions on a toasted sesame seed bun. Nothing compares to the taste.', 4,0,0,0,4,1,4,2,0,0,0),
 (3, 'Cheeseburger', 'A slice of melted processed cheddar cheese on a juicy, 100% pure Canadian beef patty with tangy pickles and onions, ketchup and mustard on a freshly-toasted bun.', 2,1,1,1,0,2,1,0,0,0,0),

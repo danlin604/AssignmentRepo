@@ -25,15 +25,15 @@
     </tr> 
     <tr>
       <td>Meat Patty</td>
-      <td>{meat patty}</td>
+      <td>{meat_patty}</td>
     </tr> 
     <tr>
       <td>Mac Sauce</td>
-      <td>{mac sauce}</td>
+      <td>{mac_sauce}</td>
     </tr> 
     <tr>
       <td>Fish patty</td>
-      <td>{fish patty}</td>
+      <td>{fish_patty}</td>
     </tr> 
     <tr>
       <td>Fries</td>
@@ -41,6 +41,6 @@
     </tr> 
     <tr>
       <td>Soft drink</td>
-      <td>{soft drink}</td>
+      <td>{soft_drink}</td>
     </tr> 
   </tbody>

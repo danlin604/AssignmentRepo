@@ -58,7 +58,7 @@ $route['production/(:num)'] = 'production_controller/get/$1';
 $route['receiving'] = 'receiving_controller';
 
 $route['admin'] = 'administrator_controller';
-$route['admin/edit/(:num)'] = 'administrator_controller/edit/$1';
+$route['admin/edit/(:any)/(:num)'] = 'administrator_controller/edit/$1/$2';
 $route['admin/cancel'] = 'administrator_controller/cancel';
 $route['admin/save'] = 'administrator_controller/save';
 /*
