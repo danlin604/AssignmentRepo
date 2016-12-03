@@ -5,7 +5,7 @@ class Stock extends MY_Model {
 	// constructor
 	function __construct()
 	{
-		parent::__construct();
+		parent::__construct();                
 	}
         
         /*
@@ -25,5 +25,4 @@ class Stock extends MY_Model {
             ];
             return $config;
         }
-
 }

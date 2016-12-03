@@ -57,10 +57,15 @@ $route['production/(:num)'] = 'production_controller/get/$1';
 
 $route['receiving'] = 'receiving_controller';
 
+//Admin
 $route['admin'] = 'administrator_controller';
 $route['admin/edit/(:any)/(:num)'] = 'administrator_controller/edit/$1/$2';
 $route['admin/cancel'] = 'administrator_controller/cancel';
-$route['admin/save'] = 'administrator_controller/save';
+$route['admin/save/(:any)'] = 'administrator_controller/save/$1';
+$route['admin/delete/(:any)'] = 'administrator_controller/delete/$1';
+$route['admin/add/(:any)'] = 'administrator_controller/add/$1';
+
+//$route['admin/delete'] = 'administrator_controller/index_delete';
 /*
 $route['admin/recipeTable/edit/(:num)'] = 'administrator_controller/recipeEdit/$1';
 $route['admin/recipeTable/delete']  = 'administrator_controller/recipeDel';
