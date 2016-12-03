@@ -12,11 +12,15 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+//require APPPATH . '/third_party/restful/libraries/Rest_controller.php';
+
 class administrator_controller extends Application
-{
-    
+{    
     function __construct() {
         parent::__construct();
+        $this->load->model('Stock');
+        $this->load->model('Recipes');
+        $this->load->model('Supplies');
         $this->load->helper('formfields');
         $this->error_messages = array();
     }
@@ -56,7 +60,7 @@ class administrator_controller extends Application
         $this->render();
     }
         
-    function edit($table=null, $id=null) {       
+    function edit($table, $id=null) {        
         // try the session first
         $key = $this->session->userdata('key');
         $record = $this->session->userdata('record');
@@ -110,11 +114,7 @@ class administrator_controller extends Application
         } else {
             echo 'Route accepts only stock, recipes, or supplies!'; 
         }
-
-        //$cats = $this->categories->all(); // get an array of category objects
-        //foreach ($cats as $code => $category) // make it into an associative array
-        //    $codes[$category->id] = $category->name;
-        //$this->data['fcategory'] = makeCombobox('Category', 'category', $record->category, $codes);          
+        
         $this->data['zsubmit'] = makeSubmitButton('Save', 'Submit changes');
 
         // show the editing form
@@ -126,8 +126,7 @@ class administrator_controller extends Application
             $this->data['pagebody'] = "supplies-edit";
         } else {
             echo 'Route accepts only stock, recipes, or supplies!'; 
-        }
-        
+        }        
         $this->show_any_errors();
         $this->render();
     }
@@ -149,5 +148,131 @@ class administrator_controller extends Application
             $result .= $onemessage . '<br/>';
         // and wrap these per our view fragment
         $this->data['error_messages'] = $this->parser->parse('admin-errors', ['error_messages' => $result], true);
+    }
+    
+    // Handle an incoming GET ... return 1 menu item
+    //you would reference that with "backend/maintenance/item/id/6".
+    function item_get()
+    {
+        $key = $this->get('id');
+        $result = $this->Stock->get($key);
+        if ($result != null)
+            $this->response($result, 200);
+        else
+            $this->response(array('error' => 'Menu item not found!'), 404);        
+    }
+    
+    // Handle an incoming POST - add a new menu item
+    // If the item ID is passed as part of the URI, eg POST to "/maintenance/item/id/123"
+    function item_post()
+    {
+        $key = $this->get('id');
+        $record = array_merge(array('id' => $key), $_POST);
+        $this->Stock->add($record);
+        $this->response(array('ok'), 200);
+    }
+    
+    function item_put()
+    {
+        $key = $this->put('id');
+        $record = array_merge(array('id' => $key), $this->_put_args);
+        $this->Stock->update($record);
+        $this->response(array('ok'), 200);
+    }
+    
+    function delete($table) {
+        $key = $this->session->userdata('key');
+        $record = $this->session->userdata('record');
+        // only delete if editing an existing record
+        if (! empty($record)) {
+            if ($table == 'stock') {
+                $this->Stock->delete($key);
+            } elseif ($table == 'recipes') {
+                $this->recipes->delete($key);
+            } elseif ($table == 'supplies') {
+                $this->supplies->delete($key);
+            } else {
+                echo 'Route accepts only stock, recipes, or supplies!'; 
+            }                
+        }
+        $this->index();
+    }
+    
+    function add($table) {
+        $key = NULL;
+        
+        if ($table == 'stock') {
+            $record = $this->Stock->create();
+        } elseif ($table == 'recipes') {
+            $record = $this->Recipes->create();
+        } elseif ($table == 'supplies') {
+            $record = $this->Supplies->create();
+        } else {
+            echo 'Route accepts only stock, recipes, or supplies!'; 
+        }
+        $this->session->set_userdata('key', $key);
+        $this->session->set_userdata('record', $record);    
+        $this->edit($table,null);
+    }
+    
+    function save($table) {
+        // try the session first
+        $key = $this->session->userdata('key');
+        $record = $this->session->userdata('record');
+
+        // if not there, nothing is in progress
+        if (empty($record)) {
+            $this->index();
+            return;
+        }       
+        
+        // update our data transfer object
+        $incoming = $this->input->post();
+        foreach(get_object_vars($record) as $index => $value)
+            if (isset($incoming[$index]))
+                $record->$index = $incoming[$index];
+        $this->session->set_userdata('record',$record);
+
+        // validate
+        //$this->load->library('form_validation');
+        //$this->form_validation->set_rules($this->Stock->rules());
+        //if ($this->form_validation->run() != TRUE)
+        //$this->error_messages = $this->form_validation->error_array(); 
+        
+        // check menu code for additions
+        if ($key == null) 
+                if ($this->Stock->exists($record->id))
+                        $this->error_messages[] = 'Duplicate key adding new menu item';
+       
+        // save or not
+        if (! empty($this->error_messages)) {
+                $this->edit($table);
+                return;
+        }
+        
+        // update our table, finally!
+        if ($key == null) {            
+            if ($table == 'stock') {
+                $this->Stock->add($record);
+            } elseif ($table == 'recipes') {
+                $this->Recipes->add($record);
+            } elseif ($table == 'supplies') {
+                $this->Supplies->add($record);
+            } else {
+                echo 'Route accepts only stock, recipes, or supplies!'; 
+            }           
+        } else {
+            if ($table == 'stock') {
+                $this->Stock->update($record);
+            } elseif ($table == 'recipes') {
+                $this->Recipes->update($record);
+            } elseif ($table == 'supplies') {
+                $this->Supplies->update($record);
+            } else {
+                echo 'Route accepts only stock, recipes, or supplies!'; 
+            }
+        }    
+        // and redisplay the list
+        $this->index();
     }
 }
