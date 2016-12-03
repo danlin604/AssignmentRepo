@@ -56,7 +56,24 @@ $route['production'] = 'production_controller';
 $route['production/(:num)'] = 'production_controller/get/$1';
 
 $route['receiving'] = 'receiving_controller';
+
 $route['admin'] = 'administrator_controller';
+$route['admin/edit/(:any)/(:num)'] = 'administrator_controller/edit/$1/$2';
+$route['admin/cancel'] = 'administrator_controller/cancel';
+$route['admin/save'] = 'administrator_controller/save';
+/*
+$route['admin/recipeTable/edit/(:num)'] = 'administrator_controller/recipeEdit/$1';
+$route['admin/recipeTable/delete']  = 'administrator_controller/recipeDel';
+$route['admin/recipeTable/save']  = 'administrator_controller/recipeSave';
+
+$route['admin/stockTable/edit/(:num)']  = 'administrator_controller/stockEdit/$1';
+$route['admin/stockTable/delete']  = 'administrator_controller/stockDel';
+$route['admin/stockTable/save']   = 'administrator_controller/stockSave';
+
+$route['admin/suppliesTable/edit/(:num)']  = 'administrator_controller/suppliesEdit/$1';
+$route['admin/suppliesTable/delete']  = 'administrator_controller/suppliesDel';
+$route['admin/suppliesTable/save']   = 'administrator_controller/suppliesSave';
+*/
 
 $route['default_controller'] = 'homepage_controller';
 $route['404_override'] = '';
